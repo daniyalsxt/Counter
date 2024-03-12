@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(17, 17, 17);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+::selection{
+    display: none;
+    text-shadow: none;
+}
+
+:root{
+    --Color:rgba(255, 255, 255, 0.301);
+}
+
+:root.Green{
+    --Color:rgb(128, 255, 24);
+}
+
+:root.Red{
+    --Color:rgb(255, 60, 53);
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+main>h1{
+    color: white;
+    font-size: 2.6rem;
+    margin-bottom: 5px;
+}
+
+main>h1>span{
+    color: rgba(255, 255, 255, 0.568);
+}
+
+#Counter{
+    height: 16rem;
+    width: 17.6rem;
+    background-color: rgb(37, 37, 37);
+    margin-bottom: 26px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.514);
+}
+
+#Counter::before{
+    content: "";
+    position: absolute;
+    height: 7px;
+    background-color: var(--Color);
+    width: 100%;
+    bottom: 0;
+}
+
+#Counter::after{
+    content: "";
+    position: absolute;
+    height: 28rem;
+    rotate: 40deg;
+    width: 9rem;
+    bottom: -10px;
+    left: -14rem;
+    background-color: rgba(255, 255, 255, 0.041);
+    animation: move 10s ease infinite;
+}
+
+@keyframes move {
+    100%{
+        bottom: -10rem;
+        left: 25rem;
+    }
+}
+
+#Counter>span i, #Counter>h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--Color);
+}
+
+#Counter>span i{
+    font-size: 2.2rem;
+}
+
+
+#Counter>h2{
+    font-size: 6.5rem;
+    color: white;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.932);
+}
+
+
+#Counter>h5{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: .9rem;
+    color: var(--Color);
+    opacity: 1;
+}
+
+.buttonWrapper>button{
+    height: 2.4rem;
+    width: 8rem;
+    margin: 0 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buttonWrapper>button:nth-child(1){
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
+.buttonWrapper>button:nth-child(1):hover{
+    background-color: rgb(34, 34, 34);
+}
+
+.buttonWrapper>button:nth-child(1):hover i {
+    position: relative;
+    top: 3px;/* Adjust the value as needed */
+}
+
+
+.buttonWrapper>button:nth-child(2){
+    background-color: rgb(128, 255, 24);
+    color: black;
+    font-weight: 700;
+}
+
+.buttonWrapper>button:nth-child(2):hover{
+    background-color: rgb(157, 252, 79);
+}
+
+.buttonWrapper>button:nth-child(2):hover i {
+    position: relative;
+    bottom: 3px;
+}
